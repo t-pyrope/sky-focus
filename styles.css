@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  overflow: hidden;
+}
+
+button:focus {
+  outline: none;
+  cursor: pointer;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  padding: 2rem 0rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  flex-basis: 40%;
+}
+
+span.logo-colored {
+  color: #f2d740;
+  font-family: "Caveat", cursive;
+  font-size: 1.9rem;
+  padding-right: 0.3rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  flex-basis: 60%;
+  justify-content: flex-start;
+}
+
+li {
+  margin-right: 2rem;
+}
+
+li.sign-in {
+  margin-left: auto;
+  margin-right: 0rem;
+}
+
+.menu-toggle {
+  display: none;
+  text-transform: uppercase;
+}
+
+/* END OF NAVBAR */
+
+/* MAIN */
+
+main {
+  width: 90%;
+  margin: auto;
+}
+
+.promo {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 70%;
+}
+
+.headers {
+  margin-bottom: 2rem;
+}
+
+.headers h2 {
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.promo p {
+  width: 70%;
+  margin-bottom: 1.5rem;
+  line-height: 1.5rem;
+}
+
+.promo button {
+  text-transform: uppercase;
+  background-color: transparent;
+  color: white;
+  border: none;
+  border: 1px solid #f2d740;
+  padding: 0.7rem 2.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition-duration: 0.4s;
+  transition-timing-function: ease;
+  transition-property: background-color, color;
+}
+
+.promo button:hover {
+  background-color: #f2d740;
+  color: #151a16;
+}
+
+.promo button:active {
+  background-color: #bba631;
+  color: #151a16;
+}
+
+/* END OF MAIN */
+
+/* BACKGROUND IMAGE */
+
+.bg-img {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-img img {
+  width: 105%;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0%;
+}
+
+/* END OF BACKGROUND IMAGE */
+
+/* MEDIA */
+
+@media (max-width: 1200px) {
+  .promo {
+    width: 90%;
+  }
+  .promo p {
+    width: 65%;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .promo {
+    width: 100%;
+  }
+
+  .headers h2 {
+    font-size: 4.4rem;
+  }
+
+  .promo p {
+    width: 65%;
+  }
+  .bg-img img {
+    width: 105%;
+    object-fit: cover;
+    position: absolute;
+    top: 0%;
+    height: 100vh;
+    left: 0%;
+  }
+}
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .promo {
+    justify-content: center;
+    width: 60%;
+  }
+  .headers {
+    margin-bottom: 3rem;
+  }
+
+  .promo p {
+    margin-bottom: 2rem;
+  }
+
+  .promo button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 823px) and (orientation: portrait) {
+  .headers {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 823px) and (orientation: landscape) {
+  .navbar {
+    padding: 1rem 0rem;
+  }
+  .headers {
+    margin-bottom: 1rem;
+  }
+  .headers h2 {
+    font-size: 2.5rem;
+  }
+
+  .promo p {
+    margin-bottom: 1.3rem;
+  }
+
+  .promo button {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+  .navbar {
+    padding: 0.5rem 0rem;
+  }
+  .headers {
+    margin-bottom: 0.5rem;
+  }
+  .headers h2 {
+    font-size: 2rem;
+  }
+
+  .promo p {
+    width: 90%;
+    margin-bottom: 0.7rem;
+  }
+
+  .promo button {
+    padding: 0.5rem 2rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .headers h2 {
+    font-size: 3.5rem;
+  }
+  .promo {
+    width: 100%;
+  }
+  .promo p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 360px) {
+  .navbar {
+    padding: 0.5rem 0rem;
+  }
+  .promo {
+    min-height: 90vh;
+  }
+  .headers {
+    margin-bottom: 1rem;
+  }
+
+  .headers h2 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+  .promo p {
+    margin-bottom: 1rem;
+  }
+
+  .promo button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 280px) {
+  .headers h2 {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+/* END OF MEDIA */
