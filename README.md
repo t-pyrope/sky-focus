@@ -1,3 +1,3 @@
 # Sky Focus
 
-Solar eclipse of June 10, 2021
+Solar eclipse on June 10, 2021
