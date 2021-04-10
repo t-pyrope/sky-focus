@@ -9,6 +9,7 @@ body {
   position: relative;
   font-family: "Roboto", sans-serif;
   overflow: hidden;
+  background-color: #000000;
 }
 
 button:focus {
@@ -31,6 +32,12 @@ button:focus {
 a {
   color: white;
   text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+a:hover {
+  color: #f98d1b;
+  font-weight: bold;
 }
 
 h1 {
@@ -38,7 +45,7 @@ h1 {
 }
 
 span.logo-colored {
-  color: #f2d740;
+  color: #f98d1b;
   font-family: "Caveat", cursive;
   font-size: 1.9rem;
   padding-right: 0.3rem;
@@ -158,25 +165,23 @@ main {
   .promo p {
     width: 65%;
   }
-
   .navbar ul {
     display: none;
   }
-
   .menu-toggle {
     display: block;
   }
 }
 
+/* LANDSCAPES MEDIA */
+
 @media (max-width: 1024px) and (orientation: landscape) {
   .promo {
     width: 100%;
   }
-
   .headers h2 {
     font-size: 4.4rem;
   }
-
   .promo p {
     width: 65%;
   }
@@ -190,30 +195,6 @@ main {
   }
 }
 
-@media only screen and (max-width: 1024px) and (orientation: portrait) {
-  .promo {
-    justify-content: center;
-    width: 60%;
-  }
-  .headers {
-    margin-bottom: 3rem;
-  }
-
-  .promo p {
-    margin-bottom: 2rem;
-  }
-
-  .promo button {
-    font-size: 1.2rem;
-  }
-}
-
-@media only screen and (max-width: 823px) and (orientation: portrait) {
-  .headers {
-    margin-bottom: 2rem;
-  }
-}
-
 @media only screen and (max-width: 823px) and (orientation: landscape) {
   .navbar {
     padding: 1rem 0rem;
@@ -224,13 +205,33 @@ main {
   .headers h2 {
     font-size: 2.5rem;
   }
-
   .promo p {
     margin-bottom: 1.3rem;
   }
-
   .promo button {
     font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 660px) and (max-height: 280px) and (orientation: landscape) {
+  .promo {
+    width: 100%;
+  }
+  .headers {
+    margin-bottom: 0.5rem;
+  }
+  .headers h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .promo p {
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .promo button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
   }
 }
 
@@ -244,18 +245,46 @@ main {
   .headers h2 {
     font-size: 2rem;
   }
-
   .promo p {
     width: 90%;
     margin-bottom: 0.7rem;
   }
-
   .promo button {
     padding: 0.5rem 2rem;
   }
 }
 
-@media (max-width: 620px) {
+/* END OF LANDSCAPES MEDIA */
+
+/* PORTRAITS MEDIA */
+
+@media only screen and (max-width: 1024px) and (orientation: portrait) {
+  .promo {
+    justify-content: center;
+    width: 60%;
+  }
+  .headers {
+    margin-bottom: 3rem;
+  }
+  .promo p {
+    margin-bottom: 2rem;
+  }
+  .promo button {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 823px) and (orientation: portrait) {
+  .headers {
+    margin-bottom: 2rem;
+  }
+}
+
+/* END OF PORTRAITS MEDIA */
+
+/* OTHERS MEDIA*/
+
+@media (max-width: 540px) {
   .headers h2 {
     font-size: 3.5rem;
   }
@@ -277,7 +306,6 @@ main {
   .headers {
     margin-bottom: 1rem;
   }
-
   .headers h2 {
     font-size: 3.5rem;
     line-height: 3.5rem;
@@ -285,7 +313,6 @@ main {
   .promo p {
     margin-bottom: 1rem;
   }
-
   .promo button {
     font-size: 1rem;
   }
@@ -297,5 +324,7 @@ main {
     line-height: 3rem;
   }
 }
+
+/* END OF OTHERS MEDIA */
 
 /* END OF MEDIA */
